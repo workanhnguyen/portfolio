@@ -4,6 +4,8 @@ import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import FlagCircleOutlinedIcon from "@mui/icons-material/FlagCircleOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
+import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
+
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -27,9 +29,23 @@ const Education = () => {
         },
       }}
     >
-      <TimelineItem>
+
+<TimelineItem>
         <TimelineSeparator>
           <TimelineDot color="success">
+            <CheckCircleOutlinedIcon />
+          </TimelineDot>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          <p className="text-gray-500">{titleInfo.gpaScore}</p>
+          <p>{userInfo.gpaScore}</p>
+        </TimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot color="secondary">
             <AccountCircleOutlinedIcon />
           </TimelineDot>
           <TimelineConnector />
