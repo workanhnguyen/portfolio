@@ -13,6 +13,8 @@ const constants = [
         email: 'Email',
         address: 'Địa chỉ',
         github: 'Github',
+        honorsAndAwards: 'Danh hiệu & giải thưởng',
+        now: 'Hiện tại'
     }
 ];
 

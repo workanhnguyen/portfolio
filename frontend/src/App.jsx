@@ -44,7 +44,7 @@ const App = () => {
                   </div>
                 </div>
                 {/* Main content */}
-                <div className="w-full h-full flex flex-col mt-5 gap-y-3">
+                <div className="w-full flex flex-col mt-5">
                   {categoryIndex === 1 && <Overview />}
                   {categoryIndex === 2 && <Education />}
                 </div>
