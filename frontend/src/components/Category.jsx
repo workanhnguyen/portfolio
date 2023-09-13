@@ -13,7 +13,7 @@ const Category = () => {
         <div
           key={index}
           onClick={() => setCategoryIndex(category.id)}
-          className={`flex gap-x-3 p-2 mb-2 rounded-md ${
+          className={`flex gap-x-3 px-2 py-4 mb-1 rounded-md ${
             categoryIndex === category.id
               ? "bg-green-500 text-white active:bg-green-600"
               : "text-black hover:bg-gray-200 active:bg-gray-300"

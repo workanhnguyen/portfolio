@@ -3,7 +3,7 @@ import React from "react";
 import { Avatar, Container, Divider, Grid } from "@mui/material";
 
 import { avatar } from "./assets";
-import { Category, Education, Overview } from "./components";
+import { Category, Education, Overview, Skills } from "./components";
 import user from "./data/user";
 import { useStateContext } from "./contexts/ContextProvider";
 
@@ -47,6 +47,7 @@ const App = () => {
                 <div className="w-full flex flex-col mt-5">
                   {categoryIndex === 1 && <Overview />}
                   {categoryIndex === 2 && <Education />}
+                  {categoryIndex === 3 && <Skills />}
                 </div>
               </div>
             </Grid>

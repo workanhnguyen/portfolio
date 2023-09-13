@@ -1,3 +1,6 @@
+import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
+import { cssIcon, htmlIcon, javascriptIcon, materialUIIcon, reactjsIcon, tailwindcssIcon } from '../assets';
+
 const user = [
   // Vietnamese
   {
@@ -36,6 +39,39 @@ const user = [
         time: '12/2022',
         name: 'Đạt giải khuyến khích cuộc thi "Giải pháp phần mềm 24 giờ" của khoa Công nghệ thông tin.'
       },
+    ],
+    skills: [
+      {
+        skillName: "Front-end",
+        programmingLanguages: [
+          {
+            icon: htmlIcon,
+            name: 'HTML',
+          },
+          {
+            icon: cssIcon,
+            name: 'CSS',
+          },
+          {
+            icon: javascriptIcon,
+            name: 'JavaScript',
+          },
+        ],
+        frameworks: [
+          {
+            icon: reactjsIcon,
+            name: 'ReactJS',
+          },
+          {
+            icon: tailwindcssIcon,
+            name: 'Tailwind CSS',
+          },
+          {
+            icon: materialUIIcon,
+            name: 'Material UI',
+          },
+        ],
+      }
     ],
   },
 ];
