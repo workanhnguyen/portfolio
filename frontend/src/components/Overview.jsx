@@ -20,6 +20,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import user from "../data/user";
 import constants from "../data/constants";
 import AddLinkOutlined from "@mui/icons-material/AddLinkOutlined";
+import { Divider } from "@mui/material";
 
 const userInfo = user[0];
 const titleInfo = constants[0];
@@ -42,6 +43,7 @@ const Overview = () => {
           {userInfo.careerLongTermGoal}
         </p>
       </div>
+      <Divider sx={{ marginY: 2 }} variant="middle" />
       <Timeline
         sx={{
           [`& .${timelineItemClasses.root}:before`]: {

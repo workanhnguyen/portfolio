@@ -18,20 +18,23 @@ const App = () => {
       style={{ backgroundImage: "url(./src/assets/bg.jpg)" }}
     >
       <Container maxWidth="lg">
-        <div className="p-4 bg-white rounded-md">
+        <div className="px-6 py-4 bg-white rounded-md">
           <Grid container>
             {/* Categories */}
             <Grid item xs={0} sm={3} md={4} lg={3}>
-              <h1 className="ml-1.5 mb-4 text-2xl font-bold">PORTFOLIO</h1>
-              <Category />
-            </Grid>
-
-            <Grid item xs={0} marginX={3}>
-              <Divider orientation="vertical" />
+              <div className="h-full flex-1 flex">
+                <div className="w-full flex flex-col">
+                  <h1 className="ml-1.5 mb-4 text-2xl font-bold">PORTFOLIO</h1>
+                  <Category />
+                </div>
+                <div className="mx-5">
+                  <Divider orientation="vertical" />
+                </div>
+              </div>
             </Grid>
 
             {/* Contents */}
-            <Grid item xs={12} sm={8} md={7} lg={8}>
+            <Grid item xs={12} sm={9} md={8} lg={9}>
               <div className="w-full h-150 flex flex-col overflow-auto">
                 {/* User information */}
                 <div className="w-full flex items-center">

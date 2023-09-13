@@ -18,6 +18,7 @@ import TimelineOppositeContent, {
 
 import user from "../data/user";
 import constants from "../data/constants";
+import { Divider } from "@mui/material";
 
 const userInfo = user[0];
 const titleInfo = constants[0];
@@ -99,6 +100,7 @@ const Education = () => {
           </TimelineContent>
         </TimelineItem>
       </Timeline>
+      <Divider sx={{ marginY: 2 }} variant="middle" />
       <div className="w-full flex flex-col gap-y-3">
         <div>
           <p className="text-lg font-semibold">{titleInfo.honorsAndAwards}</p>
