@@ -1,12 +1,17 @@
 import React from "react";
 
-import { Avatar, Container, Divider, Grid, Typography } from "@mui/material";
-import { Category } from "./components";
+import { Avatar, Container, Divider, Grid } from "@mui/material";
+
+import { avatar } from "./assets";
+import { Category, Education, Overview } from "./components";
 import user from "./data/user";
+import { useStateContext } from "./contexts/ContextProvider";
 
 const userInfo = user[0];
 
 const App = () => {
+  const { categoryIndex } = useStateContext();
+
   return (
     <div
       className="w-full h-screen flex justify-center items-center fixed bg-no-repeat bg-cover bg-center"
@@ -28,12 +33,20 @@ const App = () => {
             {/* Contents */}
             <Grid item xs={12} sm={8} md={7} lg={8}>
               <div className="w-full h-150 flex flex-col overflow-auto">
+                {/* User information */}
                 <div className="w-full flex items-center">
-                  <Avatar sx={{ width: 60, height: 60 }} />
+                  <Avatar src={avatar} sx={{ width: 60, height: 60 }} />
                   <div className="flex-1 flex flex-col justify-center ml-3">
-                    <h1 className="text-xl uppercase font-semibold">{userInfo.lastName} {userInfo.firstName}</h1>
+                    <h1 className="text-xl uppercase font-semibold">
+                      {userInfo.lastName} {userInfo.firstName}
+                    </h1>
                     <p className="text-gray-500">{userInfo.onPosition}</p>
                   </div>
+                </div>
+                {/* Main content */}
+                <div className="w-full h-full flex flex-col mt-5 gap-y-3">
+                  {categoryIndex === 1 && <Overview />}
+                  {categoryIndex === 2 && <Education />}
                 </div>
               </div>
             </Grid>
