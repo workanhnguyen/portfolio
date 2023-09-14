@@ -1,5 +1,5 @@
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
-import { cssIcon, djangoIcon, htmlIcon, javaIcon, javascriptIcon, materialUIIcon, mongodbIcon, mysqlIcon, nodejsIcon, pythonIcon, reactjsIcon, springBootIcon, tailwindcssIcon } from '../assets';
+import { cssIcon, djangoIcon, githubIcon, gmailIcon, htmlIcon, javaIcon, javascriptIcon, materialUIIcon, mongodbIcon, mysqlIcon, nodejsIcon, pythonIcon, reactjsIcon, springBootIcon, tailwindcssIcon } from '../assets';
 
 const user = [
   // Vietnamese
@@ -262,6 +262,16 @@ const user = [
           "Fetch API và hiển thị dữ liệu."
         ]
       }
+    ],
+    contacts: [
+      {
+        icon: githubIcon,
+        link: 'https://github.com/workanhnguyen' 
+      },
+      {
+        icon: gmailIcon,
+        link: 'anhnv.forwork@gmail.com' 
+      },
     ],
   },
 ];

@@ -15,6 +15,8 @@ import nodejsIcon from './nodejs.svg';
 import mongodbIcon from './mongodb.svg';
 import djangoIcon from './django.svg';
 import springBootIcon from './spring-boot.svg';
+import gmailIcon from './gmail.svg';
+import githubIcon from './github.svg';
 
 export {
   background,
@@ -33,5 +35,7 @@ export {
   mysqlIcon,
   djangoIcon,
   nodejsIcon,
-  springBootIcon
+  springBootIcon,
+  gmailIcon,
+  githubIcon
 };
