@@ -3,7 +3,7 @@ import React from "react";
 import { Avatar, Container, Divider, Grid } from "@mui/material";
 
 import { avatar } from "./assets";
-import { Category, Education, Overview, Skills } from "./components";
+import { Category, Contacts, Education, Overview, Projects, Skills } from "./components";
 import user from "./data/user";
 import { useStateContext } from "./contexts/ContextProvider";
 
@@ -35,7 +35,7 @@ const App = () => {
 
             {/* Contents */}
             <Grid item xs={12} sm={9} md={8} lg={9}>
-              <div className="w-full h-150 flex flex-col overflow-auto">
+              <div className="w-full h-160 flex flex-col overflow-auto">
                 {/* User information */}
                 <div className="w-full flex items-center">
                   <Avatar src={avatar} sx={{ width: 60, height: 60 }} />
@@ -51,6 +51,8 @@ const App = () => {
                   {categoryIndex === 1 && <Overview />}
                   {categoryIndex === 2 && <Education />}
                   {categoryIndex === 3 && <Skills />}
+                  {categoryIndex === 4 && <Projects />}
+                  {categoryIndex === 5 && <Contacts />}
                 </div>
               </div>
             </Grid>

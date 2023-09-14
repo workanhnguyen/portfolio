@@ -117,7 +117,61 @@ const user = [
       "Đạt chứng chỉ TOEIC 750 của IIG Vietnam.",
       "Có khả năng đọc hiểu tài liệu chuyên ngành.",
       "Giao tiếp ở mức cơ bản."
-    ]
+    ],
+    projects: [
+      {
+        time: '07/2023 - 09/2023',
+        name: 'Mạng xã hội cựu sinh viên.',
+        numberOfMems: "02 thành viên",
+        linkGithub: 'https://github.com/workanhnguyen/project_java',
+        technologies: [
+          {
+            name: 'Front-end',
+            techs: [
+              {
+                icon: javascriptIcon,
+                name: 'JavaScript'
+              },
+              {
+                icon: reactjsIcon,
+                name: 'ReactJS'
+              },
+              {
+                icon: tailwindcssIcon,
+                name: 'Tailwind CSS'
+              },
+              {
+                icon: materialUIIcon,
+                name: 'Material UI'
+              },
+            ]
+          },
+          {
+            name: 'Back-end',
+            techs: [
+              {
+                icon: springBootIcon,
+                name: 'Java Spring MVC'
+              },
+              {
+                icon: mysqlIcon,
+                name: 'MySQL'
+              },
+            ]
+          }
+        ],
+        functions: [
+          "CRUD người dùng, bài viết, nhóm, thư mời.",
+          "Cho phép người dùng nhắn tin theo thời gian thực (sử dụng Firebase).",
+          "Nghiệp vụ thống kê số lượng người dùng, bài đăng của quản trị viên."
+        ],
+        roleInProjects: [
+          "Phân tích nghiệp vụ hệ thống",
+          "Thiết kế giao diện bằng ReactJS",
+          "Fetch API và hiển thị dữ liệu."
+        ]
+      }
+    ],
   },
 ];
 

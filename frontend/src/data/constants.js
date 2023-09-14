@@ -15,7 +15,11 @@ const constants = [
         github: 'Github',
         honorsAndAwards: 'Danh hiệu & giải thưởng',
         now: 'Hiện tại',
-        english: 'Tiếng Anh'
+        english: 'Tiếng Anh',
+        usingTechs: 'Công nghệ sử dụng',
+        mainFuncs: 'Các chức năng chính',
+        numberOfMems: 'Số lượng',
+        role: 'Vai trò'
     }
 ];
 

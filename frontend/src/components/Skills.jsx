@@ -78,6 +78,7 @@ const Skills = () => {
       <p className="text-lg font-semibold">{titleInfo.english}</p>
         {userInfo.english.map((en, index) => (
           <Timeline
+          key={index}
             sx={{
               [`& .${timelineItemClasses.root}:before`]: {
                 flex: 0,

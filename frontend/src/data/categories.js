@@ -2,6 +2,7 @@ import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import BrightnessAutoOutlinedIcon from '@mui/icons-material/BrightnessAutoOutlined';
 import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlined';
+import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 
 const categories = [
   {
@@ -24,6 +25,12 @@ const categories = [
   },
   {
     id: 4,
+    nameVN: "Các dự án",
+    nameEN: "Contacts",
+    icon: AccountTreeOutlinedIcon
+  },
+  {
+    id: 5,
     nameVN: "Liên hệ",
     nameEN: "Contacts",
     icon: ContactSupportOutlinedIcon

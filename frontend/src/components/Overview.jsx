@@ -99,7 +99,7 @@ const Overview = () => {
           </TimelineSeparator>
           <TimelineContent>
             <p className="text-gray-500">{titleInfo.github}</p>
-            <p>{userInfo.github}</p>
+            <a href={userInfo.github} className="hover:underline">{userInfo.github}</a>
           </TimelineContent>
         </TimelineItem>
       </Timeline>
