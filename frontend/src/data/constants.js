@@ -21,6 +21,7 @@ const constants = [
         numberOfMems: 'Số lượng',
         role: 'Vai trò',
         language: 'Ngôn ngữ',
+        vietnamese: 'Tiếng Việt',
     }
 ];
 

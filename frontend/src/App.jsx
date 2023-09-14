@@ -30,7 +30,7 @@ const App = () => {
         <div className="px-6 py-4 bg-white rounded-md">
           <Grid container>
             {/* Categories */}
-            <Grid item xs={0} sm={3} md={4} lg={3}>
+            <Grid item xs={0} sm={3}>
               <div className="h-full flex-1 flex">
                 <div className="w-full flex flex-col justify-between">
                   {/* Category section */}
@@ -51,8 +51,8 @@ const App = () => {
                         label={titleInfo.language}
                         onChange={(e) => setLanguage(e.target.value)}
                       >
-                        <MenuItem value='vi'>Tiếng Việt</MenuItem>
-                        <MenuItem value='en'>Tiếng Anh</MenuItem>
+                        <MenuItem value='vi'>{titleInfo.vietnamese}</MenuItem>
+                        <MenuItem value='en'>{titleInfo.english}</MenuItem>
                       </Select>
                     </FormControl>
                   </div>
@@ -64,7 +64,7 @@ const App = () => {
             </Grid>
 
             {/* Contents */}
-            <Grid item xs={12} sm={9} md={8} lg={9}>
+            <Grid item xs={12} sm={9}>
               <div className="w-full h-160 flex flex-col overflow-auto">
                 {/* User information */}
                 <div className="w-full flex items-center">
