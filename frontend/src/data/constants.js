@@ -19,7 +19,8 @@ const constants = [
         usingTechs: 'Công nghệ sử dụng',
         mainFuncs: 'Các chức năng chính',
         numberOfMems: 'Số lượng',
-        role: 'Vai trò'
+        role: 'Vai trò',
+        language: 'Ngôn ngữ',
     }
 ];
 

@@ -1,16 +1,25 @@
 import React from "react";
 
-import { Avatar, Container, Divider, Grid } from "@mui/material";
+import { Avatar, Container, Divider, FormControl, Grid, InputLabel, MenuItem, Select } from "@mui/material";
 
 import { avatar } from "./assets";
-import { Category, Contacts, Education, Overview, Projects, Skills } from "./components";
+import {
+  Category,
+  Contacts,
+  Education,
+  Overview,
+  Projects,
+  Skills,
+} from "./components";
 import user from "./data/user";
 import { useStateContext } from "./contexts/ContextProvider";
+import constants from "./data/constants";
 
 const userInfo = user[0];
+const titleInfo = constants[0];
 
 const App = () => {
-  const { categoryIndex } = useStateContext();
+  const { categoryIndex, language, setLanguage } = useStateContext();
 
   return (
     <div
@@ -23,9 +32,30 @@ const App = () => {
             {/* Categories */}
             <Grid item xs={0} sm={3} md={4} lg={3}>
               <div className="h-full flex-1 flex">
-                <div className="w-full flex flex-col">
-                  <h1 className="ml-1.5 mb-4 text-2xl font-bold">PORTFOLIO</h1>
-                  <Category />
+                <div className="w-full flex flex-col justify-between">
+                  {/* Category section */}
+                  <div>
+                    <h1 className="ml-1.5 mb-4 text-2xl font-bold">
+                      PORTFOLIO
+                    </h1>
+                    <Category />
+                  </div>
+                  {/* Language section */}
+                  <div>
+                    <FormControl fullWidth>
+                      <InputLabel id="language-select-label">{titleInfo.language}</InputLabel>
+                      <Select
+                        labelId="language-select-label"
+                        id="language-select-label"
+                        value={language}
+                        label={titleInfo.language}
+                        onChange={(e) => setLanguage(e.target.value)}
+                      >
+                        <MenuItem value='vi'>Tiếng Việt</MenuItem>
+                        <MenuItem value='en'>Tiếng Anh</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </div>
                 </div>
                 <div className="mx-5">
                   <Divider orientation="vertical" />
