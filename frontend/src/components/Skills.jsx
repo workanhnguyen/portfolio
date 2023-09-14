@@ -24,7 +24,7 @@ const Skills = () => {
   }, [language]);
 
   return (
-    <div className="w-full flex flex-col pr-2 mb-5 gap-y-4">
+    <div className="w-full flex flex-col max-sm:justify-center pr-2 mb-5 gap-y-4">
       {userInfo.skills.map((skill, index) => (
         <Paper key={index} className="mx-1 p-4" elevation={2}>
           <p className="text-lg font-semibold">{skill.skillName}</p>

@@ -64,7 +64,7 @@ const Projects = () => {
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent>
-                <a href={project.linkGithub} className="hover:underline">
+                <a href={project.linkGithub} className="break-all hover:underline">
                   {project.linkGithub}
                 </a>
               </TimelineContent>

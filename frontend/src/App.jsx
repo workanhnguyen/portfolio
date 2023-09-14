@@ -23,19 +23,14 @@ const App = () => {
       style={{ backgroundImage: "url(./src/assets/bg.jpg)" }}
     >
       <Container maxWidth="lg">
-        <div className="px-6 py-4 bg-white rounded-md">
+        <div className="sm:px-6 sm:py-4 bg-white rounded-md overflow-hidden">
           <Grid container>
             {/* Category section */}
-            <Grid item xs={0} sm={3}>
-              <div className="h-full flex-1 flex">
+            <Grid item xs sm={0} md={3}>
+              <div className="max-sm:hidden w-full h-full flex-1 flex">
                 <div className="w-full flex flex-col justify-between">
                   {/* Category section */}
-                  <div>
-                    <h1 className="ml-1.5 mb-4 text-2xl font-bold">
-                      PORTFOLIO
-                    </h1>
-                    <Category />
-                  </div>
+                  <Category />
                   {/* Language setting */}
                   <LanguageSetting />
                 </div>
@@ -46,15 +41,28 @@ const App = () => {
             </Grid>
 
             {/* Contents */}
-            <Grid item xs={12} sm={9}>
-              <div className="w-full h-160 flex flex-col overflow-auto">
+            <Grid item xs={12} sm={12} md={9}>
+              <div className="w-full h-160 max-sm:p-4 flex flex-col overflow-auto">
                 <UserCard />
-                <div className="w-full flex flex-col mt-5">
+                <div className="max-sm:hidden w-full flex flex-col mt-5">
                   {categoryIndex === 1 && <Overview />}
                   {categoryIndex === 2 && <Education />}
                   {categoryIndex === 3 && <Skills />}
                   {categoryIndex === 4 && <Projects />}
                   {categoryIndex === 5 && <Contacts />}
+                </div>
+                <div className="sm:hidden">
+                  <Overview />
+                  <Divider variant="middle" sx={{ marginY: 3 }} />
+                  <Education />
+                  <Divider variant="middle" sx={{ marginY: 3 }} />
+                  <Skills />
+                  <Divider variant="middle" sx={{ marginY: 3 }} />
+                  <Projects />
+                  <Divider variant="middle" sx={{ marginY: 3 }} />
+                  <Contacts />
+                  <Divider variant="middle" sx={{ marginY: 3 }} />
+                  <LanguageSetting />
                 </div>
               </div>
             </Grid>
