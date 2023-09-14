@@ -11,7 +11,7 @@ export default {
         '150': '37.5rem',
         '160': '40rem',
         '200': '50rem'
-      }
+      },
     },
   },
   plugins: [],

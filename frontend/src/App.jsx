@@ -19,8 +19,7 @@ const App = () => {
 
   return (
     <div
-      className="w-full h-screen flex justify-center items-center fixed bg-no-repeat bg-cover bg-center"
-      style={{ backgroundImage: "url(/src/assets/bg.jpg)" }}
+      className="w-full h-screen flex justify-center items-center fixed bg-gradient-to-r from-cyan-500 to-blue-500"
     >
       <Container maxWidth="lg">
         <div className="sm:px-6 sm:py-4 bg-white rounded-md overflow-hidden">

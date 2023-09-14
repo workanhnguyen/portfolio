@@ -30,7 +30,7 @@ const Overview = () => {
 
   return (
     <>
-      <div className="w-full flex flex-col gap-y-3">
+      <div className="w-full flex flex-col gap-y-3 max-sm:mt-5">
         <p className="text-lg font-semibold">{titleInfo.careerGoal}</p>
         <p className="text-justify">
           <span className="font-semibold">
