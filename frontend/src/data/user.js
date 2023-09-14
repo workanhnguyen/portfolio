@@ -1,5 +1,5 @@
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
-import { cssIcon, djangoIcon, htmlIcon, javaIcon, javascriptIcon, materialUIIcon, mongodbIcon, mysqlIcon, pythonIcon, reactjsIcon, springBootIcon, tailwindcssIcon } from '../assets';
+import { cssIcon, djangoIcon, htmlIcon, javaIcon, javascriptIcon, materialUIIcon, mongodbIcon, mysqlIcon, nodejsIcon, pythonIcon, reactjsIcon, springBootIcon, tailwindcssIcon } from '../assets';
 
 const user = [
   // Vietnamese
@@ -161,6 +161,7 @@ const user = [
           }
         ],
         functions: [
+          "Đăng nhập, đăng ký người dùng",
           "CRUD người dùng, bài viết, nhóm, thư mời.",
           "Cho phép người dùng nhắn tin theo thời gian thực (sử dụng Firebase).",
           "Nghiệp vụ thống kê số lượng người dùng, bài đăng của quản trị viên."
@@ -172,10 +173,54 @@ const user = [
         ]
       },
       {
-        time: '07/2023 - 09/2023',
-        name: 'Mạng xã hội cựu sinh viên.',
+        time: '12/2022 - 02/2023',
+        name: 'Trang web hỗ trợ định hướng nghề nghiệp cho học sinh.',
         numberOfMems: "02 thành viên",
-        linkGithub: 'https://github.com/workanhnguyen/project_java',
+        linkGithub: 'https://github.com/workanhnguyen/career_orientation',
+        technologies: [
+          {
+            name: 'Front-end',
+            techs: [
+              {
+                icon: javascriptIcon,
+                name: 'JavaScript'
+              },
+              {
+                icon: reactjsIcon,
+                name: 'ReactJS'
+              },
+            ]
+          },
+          {
+            name: 'Back-end',
+            techs: [
+              {
+                icon: djangoIcon,
+                name: 'Django'
+              },
+              {
+                icon: mysqlIcon,
+                name: 'MySQL'
+              },
+            ]
+          }
+        ],
+        functions: [
+          "Đăng nhập, đăng ký người dùng",
+          "CRUD người dùng, khảo sát.",
+          "Cho phép người dùng làm khảo sát, sau đó phân tích và đưa ra gợi ý về ngành nghề phù hợp."
+        ],
+        roleInProjects: [
+          "Phân tích nghiệp vụ hệ thống",
+          "Thiết kế giao diện bằng ReactJS",
+          "Fetch API và hiển thị dữ liệu."
+        ]
+      },
+      {
+        time: '02/2023 - 03/2023',
+        name: 'Airbnb clone.',
+        numberOfMems: "01 thành viên",
+        linkGithub: 'https://github.com/workanhnguyen/airbnb_app',
         technologies: [
           {
             name: 'Front-end',
@@ -192,33 +237,27 @@ const user = [
                 icon: tailwindcssIcon,
                 name: 'Tailwind CSS'
               },
-              {
-                icon: materialUIIcon,
-                name: 'Material UI'
-              },
             ]
           },
           {
             name: 'Back-end',
             techs: [
               {
-                icon: springBootIcon,
-                name: 'Java Spring MVC'
+                icon: nodejsIcon,
+                name: 'NodeJS'
               },
               {
-                icon: mysqlIcon,
-                name: 'MySQL'
+                icon: mongodbIcon,
+                name: 'MongoDB'
               },
             ]
           }
         ],
         functions: [
-          "CRUD người dùng, bài viết, nhóm, thư mời.",
-          "Cho phép người dùng nhắn tin theo thời gian thực (sử dụng Firebase).",
-          "Nghiệp vụ thống kê số lượng người dùng, bài đăng của quản trị viên."
+          "Đăng nhập, đăng ký người dùng",
+          "CRUD bài đăng.",
         ],
         roleInProjects: [
-          "Phân tích nghiệp vụ hệ thống",
           "Thiết kế giao diện bằng ReactJS",
           "Fetch API và hiển thị dữ liệu."
         ]
