@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Paper } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
@@ -10,11 +10,19 @@ import TimelineContent from "@mui/lab/TimelineContent";
 
 import user from "../data/user";
 import constants from "../data/constants";
-
-const userInfo = user[0];
-const titleInfo = constants[0];
+import { useStateContext } from "../contexts/ContextProvider";
 
 const Skills = () => {
+  const { language } = useStateContext();
+
+  const [userInfo, setUserInfo] = useState(user[0]);
+  const [titleInfo, setTitleInfo] = useState(constants[0]);
+
+  useEffect(() => {
+    setUserInfo(language === "vi" ? user[0] : user[1]);
+    setTitleInfo(language === "vi" ? constants[0] : constants[1]);
+  }, [language]);
+
   return (
     <div className="w-full flex flex-col pr-2 mb-5 gap-y-4">
       {userInfo.skills.map((skill, index) => (
@@ -75,10 +83,10 @@ const Skills = () => {
         </Paper>
       ))}
       <Paper elevation={2} className="mx-1 p-4">
-      <p className="text-lg font-semibold">{titleInfo.english}</p>
+        <p className="text-lg font-semibold">{titleInfo.english}</p>
         {userInfo.english.map((en, index) => (
           <Timeline
-          key={index}
+            key={index}
             sx={{
               [`& .${timelineItemClasses.root}:before`]: {
                 flex: 0,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
@@ -13,11 +13,19 @@ import TimelineOppositeContent, {
 import user from "../data/user";
 import constants from "../data/constants";
 import { Divider } from "@mui/material";
-
-const userInfo = user[0];
-const titleInfo = constants[0];
+import { useStateContext } from "../contexts/ContextProvider";
 
 const Projects = () => {
+  const { language } = useStateContext();
+
+  const [userInfo, setUserInfo] = useState(user[0]);
+  const [titleInfo, setTitleInfo] = useState(constants[0]);
+
+  useEffect(() => {
+    setUserInfo(language === "vi" ? user[0] : user[1]);
+    setTitleInfo(language === "vi" ? constants[0] : constants[1]);
+  }, [language]);
+
   return (
     <>
       {userInfo.projects.map((project, index) => (
@@ -139,7 +147,9 @@ const Projects = () => {
               </TimelineContent>
             </TimelineItem>
           </Timeline>
-          {index < (userInfo.projects.length - 1) && <Divider sx={{ marginY: 3 }} variant="middle" />}
+          {index < userInfo.projects.length - 1 && (
+            <Divider sx={{ marginY: 3 }} variant="middle" />
+          )}
         </div>
       ))}
     </>

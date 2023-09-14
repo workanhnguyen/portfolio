@@ -6,7 +6,7 @@ import { useStateContext } from "../contexts/ContextProvider";
 const categoryList = categories;
 
 const Category = () => {
-  const { categoryIndex, setCategoryIndex } = useStateContext(); 
+  const { categoryIndex, setCategoryIndex, language } = useStateContext(); 
   return (
     <div className="flex flex-col gap-y-3">
       {categoryList.map((category, index) => (
@@ -20,7 +20,7 @@ const Category = () => {
           } cursor-pointer`}
         >
           {category.icon && <category.icon />}
-          <p>{category.nameVN}</p>
+          {language === 'vi' ? <p>{category.nameVN}</p> : <p>{category.nameEN}</p>}
         </div>
       ))}
     </div>

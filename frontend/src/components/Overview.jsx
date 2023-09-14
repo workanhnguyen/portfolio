@@ -1,14 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import FlagCircleOutlinedIcon from "@mui/icons-material/FlagCircleOutlined";
-import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
-import CakeOutlinedIcon from "@mui/icons-material/CakeOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import AddLinkOutlinedIcon from "@mui/icons-material/AddLinkOutlined";
 
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
@@ -21,11 +15,19 @@ import user from "../data/user";
 import constants from "../data/constants";
 import AddLinkOutlined from "@mui/icons-material/AddLinkOutlined";
 import { Divider } from "@mui/material";
-
-const userInfo = user[0];
-const titleInfo = constants[0];
+import { useStateContext } from "../contexts/ContextProvider";
 
 const Overview = () => {
+  const { language } = useStateContext();
+
+  const [userInfo, setUserInfo] = useState(user[0]);
+  const [titleInfo, setTitleInfo] = useState(constants[0]);
+
+  useEffect(() => {
+    setUserInfo(language === "vi" ? user[0] : user[1]);
+    setTitleInfo(language === "vi" ? constants[0] : constants[1]);
+  }, [language]);
+
   return (
     <>
       <div className="w-full flex flex-col gap-y-3">
@@ -99,7 +101,9 @@ const Overview = () => {
           </TimelineSeparator>
           <TimelineContent>
             <p className="text-gray-500">{titleInfo.github}</p>
-            <a href={userInfo.github} className="hover:underline">{userInfo.github}</a>
+            <a href={userInfo.github} className="hover:underline">
+              {userInfo.github}
+            </a>
           </TimelineContent>
         </TimelineItem>
       </Timeline>

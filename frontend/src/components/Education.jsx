@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
@@ -19,11 +19,19 @@ import TimelineOppositeContent, {
 import user from "../data/user";
 import constants from "../data/constants";
 import { Divider } from "@mui/material";
-
-const userInfo = user[0];
-const titleInfo = constants[0];
+import { useStateContext } from "../contexts/ContextProvider";
 
 const Education = () => {
+  const { language } = useStateContext();
+
+  const [userInfo, setUserInfo] = useState(user[0]);
+  const [titleInfo, setTitleInfo] = useState(constants[0]);
+
+  useEffect(() => {
+    setUserInfo(language === "vi" ? user[0] : user[1]);
+    setTitleInfo(language === "vi" ? constants[0] : constants[1]);
+  }, [language]);
+
   return (
     <>
       <Timeline
