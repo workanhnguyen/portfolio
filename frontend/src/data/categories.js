@@ -26,7 +26,7 @@ const categories = [
   {
     id: 4,
     nameVN: "Các dự án",
-    nameEN: "Contacts",
+    nameEN: "Projects",
     icon: AccountTreeOutlinedIcon
   },
   {
