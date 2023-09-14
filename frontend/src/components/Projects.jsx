@@ -139,7 +139,7 @@ const Projects = () => {
               </TimelineContent>
             </TimelineItem>
           </Timeline>
-          <Divider sx={{ marginTop: 2 }} variant="middle" />
+          {index < (userInfo.projects.length - 1) && <Divider sx={{ marginY: 3 }} variant="middle" />}
         </div>
       ))}
     </>
