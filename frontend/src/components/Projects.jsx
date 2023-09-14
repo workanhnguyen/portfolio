@@ -38,7 +38,7 @@ const Projects = () => {
                 padding: 0,
               },
               [`& .${timelineOppositeContentClasses.root}`]: {
-                flex: 0.1,
+                flex: 0.2,
               },
             }}
           >
