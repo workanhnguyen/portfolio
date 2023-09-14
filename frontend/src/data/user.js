@@ -1,5 +1,5 @@
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
-import { cssIcon, htmlIcon, javascriptIcon, materialUIIcon, reactjsIcon, tailwindcssIcon } from '../assets';
+import { cssIcon, djangoIcon, htmlIcon, javaIcon, javascriptIcon, materialUIIcon, mongodbIcon, mysqlIcon, pythonIcon, reactjsIcon, springBootIcon, tailwindcssIcon } from '../assets';
 
 const user = [
   // Vietnamese
@@ -71,8 +71,53 @@ const user = [
             name: 'Material UI',
           },
         ],
+      },
+      {
+        skillName: "Back-end",
+        programmingLanguages: [
+          {
+            icon: javaIcon,
+            name: 'Java',
+          },
+          {
+            icon: pythonIcon,
+            name: 'Python',
+          },
+        ],
+        frameworks: [
+          {
+            icon: springBootIcon,
+            name: 'Spring Boot',
+          },
+          {
+            icon: djangoIcon,
+            name: 'Django',
+          },
+          {
+            icon: springBootIcon,
+            name: 'Spring MVC',
+          },
+        ],
+      },
+      {
+        skillName: "Database",
+        programmingLanguages: [
+          {
+            icon: mysqlIcon,
+            name: 'MySQL',
+          },
+          {
+            icon: mongodbIcon,
+            name: 'MongoDB',
+          },
+        ],
       }
     ],
+    english: [
+      "Đạt chứng chỉ TOEIC 750 của IIG Vietnam.",
+      "Có khả năng đọc hiểu tài liệu chuyên ngành.",
+      "Giao tiếp ở mức cơ bản."
+    ]
   },
 ];
 

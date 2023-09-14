@@ -14,7 +14,8 @@ const constants = [
         address: 'Địa chỉ',
         github: 'Github',
         honorsAndAwards: 'Danh hiệu & giải thưởng',
-        now: 'Hiện tại'
+        now: 'Hiện tại',
+        english: 'Tiếng Anh'
     }
 ];
 
